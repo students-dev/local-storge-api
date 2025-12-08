@@ -1,0 +1,62 @@
+{
+  "name": "@students-dev/local-storage-api",
+  "version": "1.0.0",
+  "description": "A comprehensive, production-ready client-side storage API with advanced features, automatic fallbacks, and developer tooling",
+  "author": "Ramkrishna Bhatt V (Milagres PU College, Kallianpur, Udupi)",
+  "license": "MIT",
+  "main": "dist/index.cjs",
+  "types": "types/index.d.ts",
+  "bin": {
+    "local-storage-api": "bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "types",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "indexeddb",
+    "localstorage",
+    "browser-storage",
+    "client-storage",
+    "cache",
+    "persistence",
+    "offline",
+    "storage-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/students-dev/local-storage-api.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.js",
+    "prepare": "npm run build",
+    "docs": "jsdoc -c jsdoc.conf.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "jsdoc": "^4.0.0",
+    "prettier": "^3.0.0",
+    "rollup": "^4.0.0"
+  },
+  "dependencies": {
+    "lz-string": "^1.5.0",
+    "@msgpack/msgpack": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 11"
+  ]
+}
