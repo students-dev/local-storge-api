@@ -3,6 +3,7 @@
   "displayName": "Local Storage API",
   "description": "VS Code extension for debugging and inspecting Local Storage API",
   "version": "1.0.0",
+  "publisher": "students-dev",
   "author": "Ramkrishna Bhatt V (Milagres PU College, Kallianpur, Udupi)",
   "license": "MIT",
   "engines": {
