@@ -8,6 +8,7 @@ yarn-error.log*
 dist/
 *.tgz
 *.tar.gz
+*.vsix
 
 # Environment variables
 .env
