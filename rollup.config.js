@@ -15,6 +15,7 @@ export default [
       format: 'cjs',
       sourcemap: true
     },
+    external: ['lz-string', '@msgpack/msgpack'],
     plugins: [
       resolve(),
       commonjs()
@@ -27,10 +28,24 @@ export default [
       format: 'cjs',
       sourcemap: true
     },
+    external: ['lz-string', '@msgpack/msgpack'],
     plugins: [
       resolve(),
       commonjs(),
       // Add minification plugin if needed, but for simplicity, skip
+    ]
+  },
+  {
+    input: 'src/cli.js',
+    output: {
+      file: 'dist/cli.cjs',
+      format: 'cjs',
+      sourcemap: true
+    },
+    external: ['lz-string', '@msgpack/msgpack', 'fs', 'path'],
+    plugins: [
+      resolve(),
+      commonjs()
     ]
   }
 ];
