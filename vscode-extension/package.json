@@ -1,0 +1,91 @@
+{
+  "name": "local-storage-api-extension",
+  "displayName": "Local Storage API",
+  "description": "VS Code extension for debugging and inspecting Local Storage API",
+  "version": "1.0.0",
+  "author": "Ramkrishna Bhatt V (Milagres PU College, Kallianpur, Udupi)",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:localStorageAPI.openInspector"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "localStorageAPI.openInspector",
+        "title": "Local Storage API: Open Inspector"
+      },
+      {
+        "command": "localStorageAPI.clearStorage",
+        "title": "Local Storage API: Clear Storage"
+      },
+      {
+        "command": "localStorageAPI.exportStorage",
+        "title": "Local Storage API: Export Storage"
+      },
+      {
+        "command": "localStorageAPI.generateSnapshot",
+        "title": "Local Storage API: Generate Snapshot"
+      },
+      {
+        "command": "localStorageAPI.compareSnapshots",
+        "title": "Local Storage API: Compare Snapshots"
+      },
+      {
+        "command": "localStorageAPI.migrateDatabase",
+        "title": "Local Storage API: Migrate Database"
+      },
+      {
+        "command": "localStorageAPI.showMetrics",
+        "title": "Local Storage API: Show Metrics"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "storageExplorer",
+          "name": "Storage Explorer",
+          "icon": "$(database)",
+          "contextualTitle": "Local Storage API"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "storagePanels",
+          "title": "Storage Panels",
+          "icon": "$(database)"
+        }
+      ]
+    },
+    "views": {
+      "storagePanels": [
+        {
+          "id": "storageInspector",
+          "name": "Inspector",
+          "icon": "$(search-view-icon)"
+        },
+        {
+          "id": "storageMetrics",
+          "name": "Metrics",
+          "icon": "$(graph)"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "node -e \"console.log('Extension compiled')\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/students-dev/local-storage-api.git"
+  }
+}
